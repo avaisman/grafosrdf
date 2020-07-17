@@ -6,10 +6,25 @@
 <http://www.bremen-lib.org/b1> <http://www.lib.org/schema#author>   <http://www.bremen-lib.org/jlb> .   
 <http://www.bremen-lib.org/b1>   <http://www.lib.org/schema#title>     " Laberynths" .   
 <http://www.bremen-lib.org/b2> <http://www.lib.org/schema#author>   <http://www.bremen-lib.org/jlb> .   
-<http://www.bremen-lib.org/b2>   <http://www.lib.org/schema#title>  "Dr. Brodie’s Report" .             
+<http://www.bremen-lib.org/b2>   <http://www.lib.org/schema#title>  "Dr. Brodieâ€™s Report" .             
 
 <http://www.bremen-lib.org/abc>   <http://www.lib.org/schema#name> "Adolfo Bioy casares" .        <http://www.bremen-lib.org/b4>    <http://www.lib.org/schema#author>  <http://www.bremen-lib.org/abc> .        <http://www.bremen-lib.org/b4>    <http://www.lib.org/schema#title>  "The Invention of Morel" .        
 
 <http://www.bremen-lib.org/jc> <http://www.lib.org/schema#name> "Julio Cortazar" .   
 <http://www.bremen-lib.org/b5> <http://www.lib.org/schema#author>  <http://www.bremen-lib.org/jc> .        <http://www.bremen-lib.org/b5> <http://www.lib.org/schema#title> "Bestiario" .    
 <http://www.bremen-lib.org/b6> <http://www.lib.org/schema#author> <http://www.bremen-lib.org/jc> .        <http://www.bremen-lib.org/b6> <http://www.lib.org/schema#title> "Un tal Lucas" . 
+
+<http://www.bremen-lib.org/b1>  <http://www.lib.org/schema#price>  25 . 
+<http://www.bremen-lib.org/b2>  <http://www.lib.org/schema#price>  50 . 
+<http://www.bremen-lib.org/b3>  <http://www.lib.org/schema#price>  40 . 
+<http://www.bremen-lib.org/b4>  <http://www.lib.org/schema#price>  30 . 
+<http://www.bremen-lib.org/b5>  <http://www.lib.org/schema#price>  70 . 
+<http://www.bremen-lib.org/b6>  <http://www.lib.org/schema#price>  20 . 
+
+<http://www.bremen-lib.org/jlb> <http://www.w3.org/2002/07/owl#sameAs> 
+   <http://dbpedia.org/page/Jorge_Luis_Borges> . 
+<http://www.bremen-lib.org/abc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> 
+   <http://dbpedia.org/page/Adolfo_Bioy_Casares> .
+<http://www.bremen-lib.org/jc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> 
+   <http://dbpedia.org/page/Julio_Cortazar> .
+
