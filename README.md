@@ -3,7 +3,8 @@ RDF Graphs for examples:
 
 Use this links with the load instruction in SPARQL. Eg.:
 
-Load <https://raw.githubusercontent.com/avaisman/grafosrdf/master/aliceFoaf.ttl> into  GRAPH  <alice>
+Load <https://raw.githubusercontent.com/avaisman/grafosrdf/master/aliceFoaf.ttl> 
+             into  GRAPH  <alice>
 
 https://raw.githubusercontent.com/avaisman/grafosrdf/master/aliceFoaf.ttl
 
