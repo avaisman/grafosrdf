@@ -1,0 +1,15 @@
+<http://www.bremen-lib.org/library> <http://www.lib.org/schema#location> "Bremen" . 
+
+<http://www.bremen-lib.org/jlb> <http://www.lib.org/schema#name> "Jorge luis Borges" .  
+<http://www.bremen-lib.org/b3> <http://www.lib.org/schema#author>   <http://www.bremen-lib.org/jlb> .   
+<http://www.bremen-lib.org/b3>   <http://www.lib.org/schema#title>   "The Garden of Forking Paths" .        
+<http://www.bremen-lib.org/b1> <http://www.lib.org/schema#author>   <http://www.bremen-lib.org/jlb> .   
+<http://www.bremen-lib.org/b1>   <http://www.lib.org/schema#title>     " Laberynths" .   
+<http://www.bremen-lib.org/b2> <http://www.lib.org/schema#author>   <http://www.bremen-lib.org/jlb> .   
+<http://www.bremen-lib.org/b2>   <http://www.lib.org/schema#title>  "Dr. Brodie’s Report" .             
+
+<http://www.bremen-lib.org/abc>   <http://www.lib.org/schema#name> "Adolfo Bioy casares" .        <http://www.bremen-lib.org/b4>    <http://www.lib.org/schema#author>  <http://www.bremen-lib.org/abc> .        <http://www.bremen-lib.org/b4>    <http://www.lib.org/schema#title>  "The Invention of Morel" .        
+
+<http://www.bremen-lib.org/jc> <http://www.lib.org/schema#name> "Julio Cortazar" .   
+<http://www.bremen-lib.org/b5> <http://www.lib.org/schema#author>  <http://www.bremen-lib.org/jc> .        <http://www.bremen-lib.org/b5> <http://www.lib.org/schema#title> "Bestiario" .    
+<http://www.bremen-lib.org/b6> <http://www.lib.org/schema#author> <http://www.bremen-lib.org/jc> .        <http://www.bremen-lib.org/b6> <http://www.lib.org/schema#title> "Un tal Lucas" . 
