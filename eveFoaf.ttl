@@ -1,0 +1,31 @@
+@prefix  foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix  dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix  bio:  <http://purl.org/vocab/bio/0.1/> .
+@prefix  xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<> rdf:type foaf:PersonalProfileDocument ;
+   dc:creator <mailto:eve@work.example.com> .
+
+_:a  foaf:mbox  <mailto:eve@work.example.com> ;
+     foaf:name  "Eve" ;
+     rdf:type    foaf:Person ;
+     bio:event  [ a bio:Birth; bio:date "1975-03-15"^^xsd:date ] .
+
+_:a  foaf:knows   _:b .
+_:b  foaf:nick    "bob" .
+
+_:a  foaf:knows   _:c .
+_:c  foaf:mbox     <mailto:alice@home.example.org> .
+_:c  foaf:mbox     <mailto:alice@work.example.com> .
+_:c  foaf:name     "Alice" .
+_:c  rdf:type      foaf:Person .
+
+_:a  foaf:knows   _:d .
+_:d  foaf:mbox     <mailto:celine@work.example.com> ;
+     a             foaf:Person .
+
+# Eve says that Alice knows Dan (needed for Trusted Graph Example in QueryLang2)
+
+_:d  foaf:mbox   <mailto:dan@work.example.com> .
+_:c  foaf:knows  _:d .

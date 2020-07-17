@@ -1,0 +1,14 @@
+@prefix  foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix  bio:  <http://purl.org/vocab/bio/0.1/> .
+@prefix  xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<> rdf:type foaf:PersonalProfileDocument .
+
+_:a  foaf:mbox  <mailto:celine@work.example.com> ;
+     foaf:name  "Celine" ;
+     bio:event  [ a bio:Birth; bio:date "1977-05-02"^^xsd:date ] ;
+     rdf:type    foaf:Person ;
+     foaf:knows   _:b .
+
+_:b  foaf:mbox     <mailto:alice@work.example.com> .

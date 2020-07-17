@@ -1,0 +1,51 @@
+@prefix  foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix  dc:   <http://purl.org/dc/elements/1.1/> .
+@prefix  bio:  <http://purl.org/vocab/bio/0.1/> .
+@prefix  xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<> rdf:type   foaf:PersonalProfileDocument ;
+   dc:creator <mailto:alice@work.example.com> .
+
+_:a  a             foaf:Person ;
+     foaf:name     "Alice" ;
+     foaf:mbox     <mailto:alice@work.example.com> ;
+     foaf:mbox     <mailto:alice@home.example.org> ;
+     foaf:knows    _:b ;
+     bio:event     [ a bio:Birth; bio:date "1974-02-28"^^xsd:date ] .
+
+_:b  a             foaf:Person ;
+     foaf:name     "Bob" ;
+     foaf:mbox     <mailto:bob@work.example.com> ;
+     bio:event     [ a bio:Birth; bio:date "1973-01-02"^^xsd:date ] ;
+     rdfs:seeAlso  <bobFoaf.rdf> ;
+     rdf:type      foaf:Person .
+
+<bobFoaf.rdf> rdf:type foaf:PersonalProfileDocument .
+
+_:a  foaf:knows    _:c .
+_:c  foaf:mbox  <mailto:eve@work.example.com> .
+
+INSERT DATA {GRAPH <AliceFoaf>  {  
+
+_:a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>             <http://xmlns.com/foaf/0.1/#Person> ;
+     <http://xmlns.com/foaf/0.1/#name>  "Alice" ;
+     <http://xmlns.com/foaf/0.1/#mbox>     <mailto:alice@work.example.com> ;
+     <http://xmlns.com/foaf/0.1/#mbox>    <mailto:alice@home.example.org> ;
+     <http://xmlns.com/foaf/0.1/knows>     _:b ;
+     <http://purl.org/vocab/bio/0.1/#event>      [ http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.org/vocab/bio/0.1/#Birth; <http://purl.org/vocab/bio/0.1/#date "1974-02-28"^^<http://www.w3.org/2001/XMLSchema#date> ] .
+
+}}
+INSERT DATA {GRAPH <AliceFoaf>  {  
+
+_:a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  <http://xmlns.com/foaf/0.1/#Person> ;
+     <http://xmlns.com/foaf/0.1/#name>  "Alice" ;
+     <http://xmlns.com/foaf/0.1/#mbox>  <mailto:alice@work.example.com> ;
+     <http://xmlns.com/foaf/0.1/#mbox>  <mailto:alice@home.example.org> ;
+     <http://xmlns.com/foaf/0.1/#knows>   _:b ;
+     <http://purl.org/vocab/bio/0.1/#event>      [<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.org/vocab/bio/0.1/#Birth>; <http://purl.org/vocab/bio/0.1/#date> "1974-02-28"^^<http://www.w3.org/2001/XMLSchema#date> ] .
+
+
+
+
